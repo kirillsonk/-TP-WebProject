@@ -1,0 +1,32 @@
+{% extends "mainapp/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="sonk-block-caption">
+        <h2>Log In</h2>
+    </div>
+    <form action="/login/" method="post" class="sonk-form">
+        {% csrf_token %}
+        <div class="form-group row">
+            <label for="username" class="col-2">Login: </label>
+            <div class="col-10">
+                <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="password" class="col-2">Password: </label>
+            <div class="col-10">
+                <input type="password" required class="form-control" name="password" id="password" placeholder="Password">
+            </div>
+            {% if login_error %}
+                <label class="error">{{ login_error }}</label>
+            {% endif %}
+        </div>
+        <div>
+            <a href="#">Forgot password?</a>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+{% endblock %}

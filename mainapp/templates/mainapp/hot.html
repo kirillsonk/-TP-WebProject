@@ -1,0 +1,18 @@
+{% extends "mainapp/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="sonk-block-caption">
+        <h2>{{ header }}</h2>
+        <div class="sonk-block-caption secondary">
+        </div>
+    </div>
+
+    {% for question in questions %}
+        {% include "mainapp/includes/postBlock.html" %}
+    {% endfor %}
+
+    {% include "mainapp/includes/paginator.html" with objects=questions %}
+
+{% endblock %}

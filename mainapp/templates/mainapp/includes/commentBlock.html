@@ -1,0 +1,12 @@
+{% load staticfiles %}
+<div class="sonk-comment-block">
+    <div class="row">
+        <div class="col-2 text-center">
+            <img class="sonk-img-small" src="{% static 'mainapp/images/sonk_logo2.gif' %}">
+        </div>
+        <div class="col-10">
+            <p>{{ comment.text }}</p>
+        </div>
+    </div>
+</div>
+<hr>

@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css?family=Acme|Krona+One|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+#footer {
+    position: fixed; /* Фиксированное положение */
+    left: 0; bottom: 0; /* Левый нижний угол */
+    color: #fff; /* Цвет текста */
+    width: 100%; /* Ширина слоя */
+   }
+   #footer div {
+    padding: 20px; /* Поля вокруг текста */
+    background: #39b54a; /* Цвет фона */
+   }
+
+.nav.sonk-nav {
+    display: flex;
+    align-items: center;
+}
+
+.container.sonk-container {
+    width: 100%;
+    display: flex;
+    align-items:  center;
+}
+
+.form-inline.sonk-form-inline {
+    margin: 0;
+}
+
+.sonk-form{
+    display: block;
+    font-family: monospace;
+}
+
+textarea {
+    width: 100%;
+}
+
+.collapse.sonk-collapse {
+    width: 100%;
+}
+
+.sonk-body {
+    margin-right: 15px;
+    margin-left: 50px;
+    display: flex;
+    height: 600px;
+    width: auto;
+}
+
+.sonk-content {
+    margin-left: 40px;
+    padding-right: 40px;
+    width: calc(100% - 200px);
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+.sonk-tags {
+    padding: 10px;
+    margin-right: 40px;
+    width: 220px;
+    height: auto;
+    background: ghostwhite;
+    border-radius: 10px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+}
+
+.sonk-special-text{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+}
+
+.sonk-block-caption {
+    font-family: 'Acme', sans-serif;
+    display: flex;
+}
+
+.sonk-block-caption.secondary{
+    margin-top: 25px;
+    margin-left:15px;
+    margin-bottom: 20px;
+}
+
+.sonk-comment-block{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 7px;
+    border: 1px solid black;
+}
+
+.sonk-post {
+    display: flex;
+    border-radius: 5px;
+    width: 100%;
+    height: auto;
+    margin: 7px;
+    background: #e3f6ff78;
+    border: 1px solid black;
+}
+
+.sonk-post-title-link {
+    -webkit-font-smoothing: antialiased;
+    color: #444;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36.4px
+}
+
+.sonk-img{
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #666;
+
+}
+
+.sonk-img-small{
+    display: block;
+    width: 75px;
+    height: 75px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #666;
+
+}
+
+.sonk-pagination {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.sonk-pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.sonk-pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.sonk-pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}

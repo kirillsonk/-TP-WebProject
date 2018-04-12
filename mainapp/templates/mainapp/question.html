@@ -1,0 +1,23 @@
+{% extends "mainapp/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+    {% include "mainapp/includes/questionBlock.html" %}
+
+    {% for comment in comments %}
+        {% include "mainapp/includes/commentBlock.html" %}
+    {% endfor %}
+
+    <form  action="/question/addcomment/{{ question.id }}/" method="post" class="sonk-form">
+        <div class="form-group row">
+            <div class="col-12">
+                {% csrf_token %}
+                {{ form }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Add answer</button>
+    </form>
+
+
+{% endblock %}
