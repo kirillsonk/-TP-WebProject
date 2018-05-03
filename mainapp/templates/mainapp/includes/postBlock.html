@@ -3,11 +3,11 @@
     <div class="row">
         <div class="col-2 text-center">
             <img class="sonk-img" src="{% static 'mainapp/images/cookie_2.jpg' %}">
+{#            <img class="sonk-img-small" src="{{ ava.avatar }}">#}
             <p>
                 <a href="/like/{{ question.id }}/"><i class="icon-thumbs-up"></i></a>
                 {{ question.likes }}
                 <a href="/dislike/{{ question.id }}/"><i class="icon-thumbs-down"></i></a>
-                {{ question.dislikes }}
             </p>
         </div>
         <div class="col-10">

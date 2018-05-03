@@ -19,7 +19,7 @@
 
 .container.sonk-container {
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     align-items:  center;
 }
 
@@ -92,7 +92,7 @@ textarea {
 }
 
 .sonk-post {
-    display: flex;
+    /*display: flex;*/
     border-radius: 5px;
     width: 100%;
     height: auto;
@@ -121,11 +121,11 @@ textarea {
 
 .sonk-img-small{
     display: block;
-    width: 75px;
-    height: 75px;
-    margin: 15px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 5px #666;
+    width: 30px;
+    height: 30px;
+    margin: 5px auto;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #666;
 
 }
 

@@ -4,10 +4,10 @@
 {% block content %}
 
     <div class="sonk-block-caption">
-        <h2>Tag:<a href="/tag/{{ tags.id }}"> {{ tags_list.text }} </a></h2>
+        <h2>Tag: &nbsp; {{ tag.get }} </h2>
     </div>
 
-    {% for v in tags_list %}
+    {% for v in question_list %}
         {%  include "mainapp/includes/postBlock.html" with question=v %}
     {% endfor %}
 

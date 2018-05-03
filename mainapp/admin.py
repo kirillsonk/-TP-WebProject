@@ -1,17 +1,7 @@
 from django.contrib import admin
-from mainapp.models import Questions, Comment, Tag
+from mainapp.models import Question, Comment, Tag, Profile
 
-
-class QuestionInLine(admin.StackedInline):
-    model = Comment
-    extra = 1
-
-
-class QuestionsAdmin(admin.ModelAdmin):
-    fields = ['title', 'text', 'date', 'tags']
-    inlines = [QuestionInLine]
-
-
-admin.site.register(Questions, QuestionsAdmin)
+admin.site.register(Question)
 admin.site.register(Comment)
 admin.site.register(Tag)
+admin.site.register(Profile)

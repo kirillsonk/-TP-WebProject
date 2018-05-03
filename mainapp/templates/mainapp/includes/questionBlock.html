@@ -6,9 +6,8 @@
             <img class="sonk-img" src="{% static 'mainapp/images/cookie_2.jpg' %}">
             <p>
                 <a href="/like/{{ question.id }}/"><i class="icon-thumbs-up"></i></a>
-                {{ questions.likes }}
+                {{ question.likes }}
                 <a href="/dislike/{{ question.id }}/"><i class="icon-thumbs-down"></i></a>
-                {{ question.dislikes }}
             </p>
         </div>
         <div class="col-10">
@@ -16,11 +15,10 @@
             <p>{{ question.text }}</p>
             <p>
                 <strong>{{ question.date }}</strong>
-                &nbsp
-                &nbsp
+                &nbsp &nbsp
                 <strong>Tags:
                     {% for tag in question.tags.all %}
-                        <a href="/tag/{{ tag.id }}"> {{ tag.text }} </a>
+                        <a href="/tag/{{tag.id}}"> {{ tag.text }} </a>
                         &nbsp
                     {% endfor %}
                 </strong>

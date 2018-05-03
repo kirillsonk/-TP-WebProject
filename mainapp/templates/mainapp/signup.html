@@ -5,37 +5,17 @@
     <div class="sonk-block-caption">
         <h2>Registration</h2>
     </div>
-    <form class="sonk-form">
-        <div class="form-group row">
-            <label for="inputUserName" class="col-3">Login: </label>
-            <div class="col-9">
-                <input type="text" required class="form-control" id="inputUserName" placeholder="Login">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="inputEmail" class="col-3">Email: </label>
-            <div class="col-9">
-                <input type="email" required class="form-control" id="inputEmail" placeholder="Email">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="inputPass" class="col-3">Password: </label>
-            <div class="col-9">
-                <input type="password" required class="form-control" id="inputPass" placeholder="Password">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="inputPass" class="col-3">Repeat password: </label>
-            <div class="col-9">
-                <input type="password" required class="form-control" id="inputPass" placeholder="Repeat">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="formControlFile" class="col-3">Upload avatar</label>
-            <div class="col-9">
-                <input type="file" class="form-control-file" id="formControlFile">
-            </div>
-        </div>
+    <form class="sonk-form" method="post">
+        {% csrf_token %}
+        {{ signup_form.as_p }}
+
+{#        <div class="form-group row">#}
+{#            <label for="useravatar" class="col-3">Upload avatar</label>#}
+{#            <div class="col-9">#}
+{#                <input type="file" class="form-control-file" id="useravatar">#}
+{#            </div>#}
+{#        </div>#}
+
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </form>
 

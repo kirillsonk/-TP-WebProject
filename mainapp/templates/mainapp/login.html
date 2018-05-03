@@ -7,6 +7,7 @@
     </div>
     <form action="/login/" method="post" class="sonk-form">
         {% csrf_token %}
+        <input type="hidden" name="next" value="/<!-- I WANT TO USE 'HTTP_REFERER' HERE -->" />
         <div class="form-group row">
             <label for="username" class="col-2">Login: </label>
             <div class="col-10">
@@ -18,11 +19,11 @@
             <div class="col-10">
                 <input type="password" required class="form-control" name="password" id="password" placeholder="Password">
             </div>
+        </div>
+        <div>
             {% if login_error %}
                 <label class="error">{{ login_error }}</label>
             {% endif %}
-        </div>
-        <div>
             <a href="#">Forgot password?</a>
         </div>
         <br>
